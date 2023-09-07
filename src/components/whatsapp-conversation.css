@@ -1,0 +1,23 @@
+.WhatsappConversation {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  gap: 0.2rem;
+  scrollbar-width: 0.25rem;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scroll-behavior: smooth;
+}
+
+.WhatsappConversation::-webkit-scrollbar {
+  border-radius: 0.1rem;
+  width: 0.3rem;
+  background-color: transparent;
+}
+
+.WhatsappConversation::-webkit-scrollbar-thumb {
+  border-radius: 0.1rem;
+  width: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}

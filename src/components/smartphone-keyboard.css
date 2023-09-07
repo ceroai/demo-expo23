@@ -1,0 +1,37 @@
+.SmartphoneKeyboard {
+  background-color: #ececec;
+  height: 29%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem 0.25rem 0.75rem 0.25rem;
+}
+
+.SmartphoneKeyboard__keys_row {
+  display: flex;
+  flex: 1;
+  gap: 0.15rem;
+}
+
+.SmartphoneKeyboard__key {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 0 0 #c3c3c3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #424242;
+  user-select: none;
+}
+
+.SmartphoneKeyboard__key--secondary {
+  background-color: #ececec;
+  color: #777777;
+}
+
+.SmartphoneKeyboard__key--long {
+  flex: 1.5;
+}

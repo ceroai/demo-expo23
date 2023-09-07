@@ -1,0 +1,48 @@
+.WhatsappMessage {
+  max-width: 87%;
+  font-size: 0.85rem;
+  line-height: 1.15;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.65rem;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  color: #151515;
+}
+
+.WhatsappMessage::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  position: absolute;
+  left: -0.4rem;
+  top: 0;
+  z-index: 2;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 120%);
+}
+
+.WhatsappMessage--bot {
+  align-self: flex-start;
+  background-color: white;
+}
+
+.WhatsappMessage--user {
+  align-self: flex-end;
+  background-color: #e9ffd9;
+}
+
+.WhatsappMessage--user + .WhatsappMessage--user::before,
+.WhatsappMessage--bot + .WhatsappMessage--bot::before {
+  display: none;
+}
+
+.WhatsappMessage--user::before {
+  right: -0.4rem;
+  left: auto;
+  background-color: #e9ffd9;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 120%);
+}
+
+.WhatsappMessage a {
+  color: #039be5;
+}

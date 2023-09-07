@@ -1,0 +1,24 @@
+.Smartphone {
+  border: 0.25rem solid black;
+  border-radius: 1.75rem;
+  aspect-ratio: 9 / 18;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Smartphone__top {
+  background-color: #017965;
+  color: white;
+  height: 10%;
+}
+
+.Smartphone__main {
+  flex: 1;
+  background-color: #eee7dd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 61%;
+}

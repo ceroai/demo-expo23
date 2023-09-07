@@ -1,0 +1,67 @@
+.WhatsappInput {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  position: relative;
+}
+
+.WhatsappInput__emoticon_button {
+  position: absolute;
+  left: 0.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #8c9196;
+}
+
+.WhatsappInput__input {
+  font-size: 1rem;
+  padding: 0.75rem 1rem 0.75rem 2.25rem;
+  border: none;
+  outline: none;
+  border-radius: 1.25rem;
+  display: block;
+  background-color: white;
+  resize: both;
+  cursor: text;
+  width: calc(100% - 2.75rem);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+.WhatsappInput__input[contenteditable]:empty::before {
+  content: 'Mensaje';
+  color: #8c9196;
+}
+
+.WhatsappInput__submit {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background-color: #00a885;
+  color: white;
+  border-radius: 9in;
+  border: none;
+  outline: none;
+  aspect-ratio: 1 / 1;
+  width: 2.5rem;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.WhatsappInput__submit:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.WhatsappInput__submit svg {
+  transform: translateX(0.05rem);
+}
