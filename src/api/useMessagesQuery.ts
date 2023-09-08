@@ -21,7 +21,7 @@ const useMessagesQuery = (): UseQueryResult<Conversation, unknown> => {
     CONVERSATION_QUERY_KEY,
     async () => {
       const { data }: { data: APIResponse } = await axios.get(
-        `http://34.176.150.32/chat/${pollId}/${phone}`
+        `https://api.expohospital2023.cero.ai/chat/${pollId}/${phone}`
       )
       if (!data || _.isEmpty(data.data.conversations)) {
         return []

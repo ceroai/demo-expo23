@@ -1,0 +1,42 @@
+.SmartphoneAppBar {
+  background-color: #017965;
+  color: white;
+  height: 8%;
+  font-size: 0.65rem;
+  display: grid;
+  grid-template: auto 1fr 1fr / auto 1fr auto;
+  place-items: center start;
+}
+
+.SmartphoneAppBar__clock {
+  font-size: 0.55rem;
+  grid-column: span 2;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+}
+
+.SmartphoneAppBar__actions {
+  padding: 0.25rem 1.25rem 0.25rem 0;
+}
+
+.SmartphoneAppBar__contact_avatar {
+  grid-row: span 2;
+  background-color: magenta;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.75rem;
+}
+
+.SmartphoneAppBar__actions {
+  grid-row: span 2;
+  font-size: 1.25rem;
+}
+
+.SmartphoneAppBar__top_icons {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}

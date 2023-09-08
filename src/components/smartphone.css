@@ -8,12 +8,6 @@
   overflow: hidden;
 }
 
-.Smartphone__top {
-  background-color: #017965;
-  color: white;
-  height: 10%;
-}
-
 .Smartphone__main {
   flex: 1;
   background-color: #eee7dd;

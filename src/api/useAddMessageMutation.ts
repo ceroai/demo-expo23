@@ -11,7 +11,7 @@ const useAddMessageMutation = (): UseMutationResult<unknown, unknown> => {
   return useMutation<any, any, any>(
     async ({ content }) => {
       const { data } = await axios.post(
-        `http://34.176.150.32/message/${pollId}/${phone}`,
+        `https://api.expohospital2023.cero.ai/message/${pollId}/${phone}`,
         { text: content }
       )
       return data
