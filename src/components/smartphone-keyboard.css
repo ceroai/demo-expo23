@@ -25,6 +25,7 @@
   justify-content: center;
   color: #424242;
   user-select: none;
+  text-transform: lowercase;
 }
 
 .SmartphoneKeyboard__key--secondary {

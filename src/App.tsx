@@ -3,6 +3,7 @@ import Smartphone from './components/smartphone'
 import { useQueryClient } from 'react-query'
 import { useLocation } from 'react-router-dom'
 import logo from './assets/images/logo.svg'
+import Draggable from 'react-draggable'
 import './App.css'
 
 function App() {
@@ -13,21 +14,28 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App__message App__message--left">
+      <Draggable>
         <img
           src={logo}
           alt="Logo CERO"
-          style={{ width: '12rem', opacity: 0.8 }}
+          style={{
+            width: '15rem',
+            zIndex: 2,
+            filter: 'drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.25))',
+          }}
+          draggable={false}
         />
-      </div>
-      <Smartphone />
-      <div className="App__message App__message--right">
-        Espectacular
-        <br />
-        demo de agendamiento
-        <br />
-        pase a probar
-      </div>
+      </Draggable>
+      <Draggable>
+        <div>
+          <Smartphone />
+        </div>
+      </Draggable>
+      <Draggable>
+        <p className="App__message App__message--right" contentEditable>
+          Espectacular demo de agendamiento pase a probar
+        </p>
+      </Draggable>
     </div>
   )
 }

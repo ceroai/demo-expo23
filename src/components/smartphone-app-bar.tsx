@@ -13,9 +13,9 @@ const SmartphoneAppBar = () => {
         <Icon icon="mdi:signal" />
         <Icon icon="mdi:battery-high" />
       </div>
-      <div className="SmartphoneAppBar__contact_avatar">C</div>
+      <div className="SmartphoneAppBar__contact_avatar"></div>
       <div className="SmartphoneAppBar__contact_name">
-        Clínica Los Saludables
+        Metropolitan Health Center
       </div>
       <div className="SmartphoneAppBar__actions">
         <Link to={`/${pollId}/${Number(phone) - 1}`} title="">
@@ -25,7 +25,7 @@ const SmartphoneAppBar = () => {
           <Icon icon="mdi:chevron-right" />
         </Link>
       </div>
-      <div className="SmartphoneAppBar__contact_status">En línea</div>
+      <div className="SmartphoneAppBar__contact_status">en línea</div>
     </div>
   )
 }

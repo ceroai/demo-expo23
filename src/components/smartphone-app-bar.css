@@ -14,6 +14,7 @@
   grid-column: span 2;
   padding-top: 0.5rem;
   padding-left: 1.25rem;
+  color: #dcfeff;
 }
 
 .SmartphoneAppBar__top_icons {
@@ -22,22 +23,26 @@
   align-items: center;
   padding-top: 0.5rem;
   padding-right: 1.25rem;
+  color: #dcfeff;
 }
 
 .SmartphoneAppBar__contact_name {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   align-self: end;
 }
 
 .SmartphoneAppBar__contact_status {
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   align-self: start;
   margin-top: 0.25rem;
+  margin-bottom: 0.05rem;
 }
 
 .SmartphoneAppBar__contact_avatar {
   grid-row: span 2;
-  background-color: magenta;
+  background: url('../assets/images/clinic.png');
+  background-position: 50% 50%;
+  background-size: 115% 115%;
   width: 1.65rem;
   height: 1.65rem;
   border-radius: 9in;
@@ -46,7 +51,7 @@
   justify-content: center;
   place-self: end;
   margin-left: 0.75rem;
-  margin-right: 0.4rem;
+  margin-right: 0.45rem;
 }
 
 .SmartphoneAppBar__actions {
