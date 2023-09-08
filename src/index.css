@@ -132,7 +132,6 @@ table {
 *::before,
 *::after,
 body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -167,4 +166,12 @@ html {
   html {
     font-size: 24px;
   }
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('assets/fonts/h.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

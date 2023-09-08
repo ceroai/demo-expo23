@@ -4,7 +4,18 @@
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-color: darkblue;
+  --color-rojo: #c54940;
+  --color-azul: #005bf1;
+  --color-purpura: #a506e9;
+  background: linear-gradient(
+    45deg,
+    var(--color-rojo) 0 25%,
+    var(--color-azul),
+    var(--color-purpura) 75%
+  );
+  background-size: 400% 400%;
+  animation: move-background 25s ease-in-out infinite;
+  font-family: 'Neue';
 }
 
 .App__message {
@@ -15,11 +26,18 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.App__message--left {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
 .App__message--right {
   font-size: 2rem;
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

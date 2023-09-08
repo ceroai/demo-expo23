@@ -1,42 +1,61 @@
 .SmartphoneAppBar {
   background-color: #017965;
   color: white;
-  height: 8%;
+  height: 10%;
   font-size: 0.65rem;
   display: grid;
-  grid-template: auto 1fr 1fr / auto 1fr auto;
+  grid-template: auto 1fr auto / auto 1fr auto;
   place-items: center start;
+  padding-bottom: 0.5rem;
 }
 
 .SmartphoneAppBar__clock {
   font-size: 0.55rem;
   grid-column: span 2;
-  padding: 0.25rem 0 0.25rem 1.25rem;
-}
-
-.SmartphoneAppBar__actions {
-  padding: 0.25rem 1.25rem 0.25rem 0;
-}
-
-.SmartphoneAppBar__contact_avatar {
-  grid-row: span 2;
-  background-color: magenta;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 9in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0.75rem;
-}
-
-.SmartphoneAppBar__actions {
-  grid-row: span 2;
-  font-size: 1.25rem;
+  padding-top: 0.5rem;
+  padding-left: 1.25rem;
 }
 
 .SmartphoneAppBar__top_icons {
   display: flex;
   gap: 0.1rem;
   align-items: center;
+  padding-top: 0.5rem;
+  padding-right: 1.25rem;
+}
+
+.SmartphoneAppBar__contact_name {
+  font-size: 0.75rem;
+  align-self: end;
+}
+
+.SmartphoneAppBar__contact_status {
+  font-size: 0.55rem;
+  align-self: start;
+  margin-top: 0.25rem;
+}
+
+.SmartphoneAppBar__contact_avatar {
+  grid-row: span 2;
+  background-color: magenta;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 9in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-self: end;
+  margin-left: 0.75rem;
+  margin-right: 0.4rem;
+}
+
+.SmartphoneAppBar__actions {
+  grid-row: span 2;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 0.75rem;
+  justify-self: end;
+  place-self: end;
 }
