@@ -7,6 +7,7 @@
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.05);
   position: relative;
   color: #151515;
+  animation: message-appears-left 0.25s ease both;
 }
 
 .WhatsappMessage::before {
@@ -29,6 +30,7 @@
 .WhatsappMessage--user {
   align-self: flex-end;
   background-color: #e9ffd9;
+  animation-name: message-appears-right;
 }
 
 .WhatsappMessage--user + .WhatsappMessage--user::before,
@@ -45,4 +47,31 @@
 
 .WhatsappMessage a {
   color: #039be5;
+  max-width: 27ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes message-appears-left {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-0.5rem) translateY(-0.25rem) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes message-appears-right {
+  0% {
+    opacity: 0.5;
+    transform: translateX(0.5rem) translateY(-0.25rem) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
 }

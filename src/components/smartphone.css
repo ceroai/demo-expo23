@@ -1,5 +1,5 @@
 .Smartphone {
-  border: 0.25rem solid black;
+  border: 0.25rem solid rgba(255, 255, 255, 0.7);
   border-radius: 1.75rem;
   aspect-ratio: 9 / 18;
   height: 95vh;
@@ -11,7 +11,10 @@
 
 .Smartphone__main {
   flex: 1;
+  background: url('../assets/images/whatsapp-background.png');
   background-color: #eee7dd;
+  background-blend-mode: soft-light;
+  background-size: 140%;
   position: relative;
   display: flex;
   flex-direction: column;

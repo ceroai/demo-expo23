@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 0.5rem 0.25rem 0.75rem 0.25rem;
+  text-transform: lowercase;
 }
 
 .SmartphoneKeyboard__keys_row {
@@ -25,7 +26,10 @@
   justify-content: center;
   color: #424242;
   user-select: none;
-  text-transform: lowercase;
+}
+
+.SmartphoneKeyboard__key--caps_on {
+  text-transform: capitalize;
 }
 
 .SmartphoneKeyboard__key--secondary {

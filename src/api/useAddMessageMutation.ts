@@ -2,7 +2,7 @@ import { useMutation, UseMutationResult, useQueryClient } from 'react-query'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Message } from './types'
-import { CONVERSATION_QUERY_KEY } from './useMessagesQuery'
+import { getConversationQueryKey } from './useMessagesQuery'
 
 const useAddMessageMutation = (): UseMutationResult<unknown, unknown> => {
   const { pollId, phone } = useParams()
@@ -18,10 +18,11 @@ const useAddMessageMutation = (): UseMutationResult<unknown, unknown> => {
     },
     {
       onMutate: async ({ content }) => {
+        const key = getConversationQueryKey(pollId as string, phone as string)
         let cachedConversation =
-          (queryClient.getQueryData(CONVERSATION_QUERY_KEY) as Message[]) || []
-        queryClient.cancelQueries(CONVERSATION_QUERY_KEY)
-        queryClient.setQueryData(CONVERSATION_QUERY_KEY, [
+          (queryClient.getQueryData(key) as Message[]) || []
+        queryClient.cancelQueries(key)
+        queryClient.setQueryData(key, [
           ...cachedConversation,
           {
             from: 'USER',

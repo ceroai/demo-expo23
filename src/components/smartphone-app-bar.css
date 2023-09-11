@@ -9,14 +9,6 @@
   padding-bottom: 0.5rem;
 }
 
-.SmartphoneAppBar__clock {
-  font-size: 0.55rem;
-  grid-column: span 2;
-  padding-top: 0.5rem;
-  padding-left: 1.25rem;
-  color: #dcfeff;
-}
-
 .SmartphoneAppBar__top_icons {
   display: flex;
   gap: 0.1rem;

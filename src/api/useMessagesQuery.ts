@@ -13,12 +13,19 @@ import {
 
 export const CONVERSATION_QUERY_KEY = 'conversation'
 
+export const getConversationQueryKey = (pollId: string, phone: string) => [
+  CONVERSATION_QUERY_KEY,
+  pollId,
+  phone,
+]
+
 const useMessagesQuery = (): UseQueryResult<Conversation, unknown> => {
   const { pollId, phone } = useParams()
   const queryClient = useQueryClient()
+  const key = getConversationQueryKey(pollId as string, phone as string)
 
   return useQuery<Conversation, any, any>(
-    CONVERSATION_QUERY_KEY,
+    key,
     async () => {
       const { data }: { data: APIResponse } = await axios.get(
         `https://api.expohospital2023.cero.ai/chat/${pollId}/${phone}`
@@ -36,9 +43,7 @@ const useMessagesQuery = (): UseQueryResult<Conversation, unknown> => {
           timestamp: parseISO(message.timestamp),
         })
       )
-      const cachedConversation = queryClient.getQueryData(
-        CONVERSATION_QUERY_KEY
-      ) as Message[]
+      const cachedConversation = queryClient.getQueryData(key) as Message[]
       if (!cachedConversation) {
         return conversationMessages
       }
@@ -52,10 +57,9 @@ const useMessagesQuery = (): UseQueryResult<Conversation, unknown> => {
         [...conversationBotMessages, ...conversationUserMessages],
         'timestamp'
       )
-      console.log({ conversationBotMessages, conversationUserMessages })
       return allMessages
     },
-    { refetchOnWindowFocus: false, refetchInterval: 3_000 }
+    { refetchOnWindowFocus: false, refetchInterval: 3_000, retry: 1 }
   )
 }
 

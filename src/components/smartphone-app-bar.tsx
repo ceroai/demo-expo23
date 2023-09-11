@@ -1,12 +1,17 @@
 import { Link, useParams } from 'react-router-dom'
 import { Icon } from '@iconify/react'
+import { RootState } from '../redux/ducks'
+import { useSelector } from 'react-redux'
+import SmartphoneClock from './smartphone-clock'
 import './smartphone-app-bar.css'
 
 const SmartphoneAppBar = () => {
   const { pollId, phone } = useParams()
+  const { editing } = useSelector((state: RootState) => state.editor)
+
   return (
     <div className="SmartphoneAppBar">
-      <span className="SmartphoneAppBar__clock">19:11</span>
+      <SmartphoneClock />
       <div className="SmartphoneAppBar__top_icons">
         <Icon icon="mdi:wifi" />
         <Icon icon="mdi:signal-5g" />
@@ -14,7 +19,7 @@ const SmartphoneAppBar = () => {
         <Icon icon="mdi:battery-high" />
       </div>
       <div className="SmartphoneAppBar__contact_avatar"></div>
-      <div className="SmartphoneAppBar__contact_name">
+      <div className="SmartphoneAppBar__contact_name" contentEditable={editing}>
         Metropolitan Health Center
       </div>
       <div className="SmartphoneAppBar__actions">

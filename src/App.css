@@ -19,6 +19,19 @@
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
+  position: relative;
+}
+
+.App__editing_message {
+  position: absolute;
+  color: white;
+  left: 1rem;
+  bottom: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.25rem;
 }
 
 .App__message {
@@ -30,11 +43,12 @@
 .App__message--right {
   font-size: 2.5rem;
   line-height: 1.25;
-  color: white; /* esto es para que no se nos olvide cambiar este texto */
+  color: white;
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   transform: rotate(25deg);
   font-weight: 500;
   max-width: 33vw;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 @keyframes move-background {
